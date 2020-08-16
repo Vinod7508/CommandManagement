@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using RestAPILearning.Data;
+using RestAPILearning.Dtos;
 using RestAPILearning.Models;
 using System.Collections.Generic;
 
@@ -11,10 +13,12 @@ namespace RestAPILearning.Controllers
     public class CommandsController : ControllerBase
     {
         private readonly ICommander _repository;
+        private readonly IMapper _mapper;
 
-        public CommandsController(ICommander repository)
+        public CommandsController(ICommander repository, IMapper mapper)
         {
             _repository = repository;
+            _mapper = mapper; 
         }
 
     //Get api/commands
@@ -23,19 +27,23 @@ namespace RestAPILearning.Controllers
        {
 
             var commandsItems = _repository.GetAllCommands();
-            return Ok(commandsItems);
+            return Ok(_mapper.Map<IEnumerable<CommandReadDto>>(commandsItems));
         }
 
 
 
         //get api/commands/{id}
         [HttpGet("{id}")]
-        public ActionResult<Command> GetCommandbyId(int id)
+        public ActionResult<CommandReadDto> GetCommandbyId(int id)
         {
 
             var singlecommand = _repository.GetCommandbyID(id);
-            return Ok(singlecommand);
+            if(singlecommand != null)
+            {
+                return Ok(_mapper.Map<CommandReadDto>(singlecommand));
+            }
 
+            return NotFound();
         }
 
 

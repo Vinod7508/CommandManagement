@@ -1,8 +1,6 @@
 C:\Users\User\source\repos\RestAPILearning\RestAPILearning\obj\Debug\netcoreapp3.1\RestAPILearning.csprojAssemblyReference.cache
 C:\Users\User\source\repos\RestAPILearning\RestAPILearning\obj\Debug\netcoreapp3.1\RestAPILearning.AssemblyInfoInputs.cache
 C:\Users\User\source\repos\RestAPILearning\RestAPILearning\obj\Debug\netcoreapp3.1\RestAPILearning.AssemblyInfo.cs
-C:\Users\User\source\repos\RestAPILearning\RestAPILearning\obj\Debug\netcoreapp3.1\RestAPILearning.csproj.CoreCompileInputs.cache
-C:\Users\User\source\repos\RestAPILearning\RestAPILearning\obj\Debug\netcoreapp3.1\RestAPILearning.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\User\source\repos\RestAPILearning\RestAPILearning\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\User\source\repos\RestAPILearning\RestAPILearning\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\User\source\repos\RestAPILearning\RestAPILearning\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -59,3 +57,7 @@ C:\Users\User\source\repos\RestAPILearning\RestAPILearning\bin\Debug\netcoreapp3
 C:\Users\User\source\repos\RestAPILearning\RestAPILearning\obj\Debug\netcoreapp3.1\RestAPILearning.dll
 C:\Users\User\source\repos\RestAPILearning\RestAPILearning\obj\Debug\netcoreapp3.1\RestAPILearning.pdb
 C:\Users\User\source\repos\RestAPILearning\RestAPILearning\obj\Debug\netcoreapp3.1\RestAPILearning.genruntimeconfig.cache
+C:\Users\User\source\repos\RestAPILearning\RestAPILearning\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\User\source\repos\RestAPILearning\RestAPILearning\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\User\source\repos\RestAPILearning\RestAPILearning\obj\Debug\netcoreapp3.1\RestAPILearning.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\RestAPILearning\RestAPILearning\obj\Debug\netcoreapp3.1\RestAPILearning.MvcApplicationPartsAssemblyInfo.cache
