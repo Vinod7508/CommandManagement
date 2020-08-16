@@ -50,3 +50,12 @@ C:\Users\User\source\repos\RestAPILearning\RestAPILearning\bin\Debug\netcoreapp3
 C:\Users\User\source\repos\RestAPILearning\RestAPILearning\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\User\source\repos\RestAPILearning\RestAPILearning\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\User\source\repos\RestAPILearning\RestAPILearning\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\User\source\repos\RestAPILearning\RestAPILearning\bin\Debug\netcoreapp3.1\RestAPILearning.deps.json
+C:\Users\User\source\repos\RestAPILearning\RestAPILearning\bin\Debug\netcoreapp3.1\RestAPILearning.runtimeconfig.json
+C:\Users\User\source\repos\RestAPILearning\RestAPILearning\bin\Debug\netcoreapp3.1\RestAPILearning.runtimeconfig.dev.json
+C:\Users\User\source\repos\RestAPILearning\RestAPILearning\bin\Debug\netcoreapp3.1\RestAPILearning.dll
+C:\Users\User\source\repos\RestAPILearning\RestAPILearning\bin\Debug\netcoreapp3.1\RestAPILearning.pdb
+C:\Users\User\source\repos\RestAPILearning\RestAPILearning\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\User\source\repos\RestAPILearning\RestAPILearning\obj\Debug\netcoreapp3.1\RestAPILearning.dll
+C:\Users\User\source\repos\RestAPILearning\RestAPILearning\obj\Debug\netcoreapp3.1\RestAPILearning.pdb
+C:\Users\User\source\repos\RestAPILearning\RestAPILearning\obj\Debug\netcoreapp3.1\RestAPILearning.genruntimeconfig.cache

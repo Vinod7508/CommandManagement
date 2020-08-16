@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using RestAPILearning.Data;
 
 namespace RestAPILearning
 {
@@ -26,6 +27,10 @@ namespace RestAPILearning
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+
+            //registering in service container
+            services.AddScoped<ICommander, CommanderRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
