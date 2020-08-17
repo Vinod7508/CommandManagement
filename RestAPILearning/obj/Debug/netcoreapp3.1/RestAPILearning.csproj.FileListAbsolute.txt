@@ -59,5 +59,4 @@ C:\Users\User\source\repos\RestAPILearning\RestAPILearning\obj\Debug\netcoreapp3
 C:\Users\User\source\repos\RestAPILearning\RestAPILearning\obj\Debug\netcoreapp3.1\RestAPILearning.genruntimeconfig.cache
 C:\Users\User\source\repos\RestAPILearning\RestAPILearning\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\User\source\repos\RestAPILearning\RestAPILearning\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\User\source\repos\RestAPILearning\RestAPILearning\obj\Debug\netcoreapp3.1\RestAPILearning.csproj.CoreCompileInputs.cache
-C:\Users\User\source\repos\RestAPILearning\RestAPILearning\obj\Debug\netcoreapp3.1\RestAPILearning.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\source\repos\RestAPILearning\RestAPILearning\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll

@@ -16,7 +16,7 @@ namespace RestAPILearning.Data
         Command GetCommandbyID(int Id);
         void CreateCommand(Command cmd);
 
-
+        void UpdateCommand(Command cmd);
 
        
     }

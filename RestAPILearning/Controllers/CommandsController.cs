@@ -63,5 +63,31 @@ namespace RestAPILearning.Controllers
 
             return CreatedAtRoute(nameof(GetCommandbyId), new { id = commandReaddto.Id },commandReaddto );
         }
+
+
+
+
+        //putaction api/commands/{id}
+        [HttpPut("{id}")]
+        public IActionResult UpdateCommand(int Id,CommandUpdateDto commandUpdateDto)
+        {
+            var commandfromrepo = _repository.GetCommandbyID(Id);
+
+            if(commandfromrepo == null)
+            {
+                return NotFound();
+            }
+
+            _mapper.Map(commandUpdateDto, commandfromrepo);
+            _repository.UpdateCommand(commandfromrepo);
+            _repository.SaveChanges();
+
+            return NoContent();
+
+
+            
+        }
+
+
     }
 }
