@@ -112,8 +112,24 @@ namespace RestAPILearning.Controllers
             _repository.SaveChanges();
 
             return NoContent();
+        }
 
 
+        //
+        [HttpDelete("{Id}")]
+        public IActionResult DeleteCommand(int Id)
+        {
+            var commandtoDelete = _repository.GetCommandbyID(Id);
+
+            if(commandtoDelete == null)
+            {
+                return NotFound();
+            }
+
+            _repository.DeleteCommand(commandtoDelete);
+            _repository.SaveChanges();
+
+            return NoContent();
         }
 
     }

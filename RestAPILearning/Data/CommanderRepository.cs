@@ -13,6 +13,11 @@ namespace RestAPILearning.Data
             throw new NotImplementedException();
         }
 
+        public void DeleteCommand(Command cmd)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Command> GetAllCommands()
         {
             var commands = new List<Command>
