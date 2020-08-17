@@ -15,6 +15,15 @@ namespace RestAPILearning.Data
             _context = context;
         }
 
+        public void CreateCommand(Command cmd)
+        {
+           if(cmd == null)
+            {
+                throw new ArgumentNullException(nameof(cmd));
+            }
+            _context.Commands.Add(cmd);
+        }
+
         public IEnumerable<Command> GetAllCommands()
         {
             return _context.Commands.ToList();
@@ -23,6 +32,11 @@ namespace RestAPILearning.Data
         public Command GetCommandbyID(int Id)
         {
             return _context.Commands.FirstOrDefault(c => c.Id == Id);
+        }
+
+        public bool SaveChanges()
+        {
+            return _context.SaveChanges() >= 0; 
         }
     }
 }

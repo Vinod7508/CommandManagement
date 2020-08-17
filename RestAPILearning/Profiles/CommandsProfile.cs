@@ -12,7 +12,10 @@ namespace RestAPILearning.Profiles
     {
         public CommandsProfile()
         {
+            //source --> destination
             CreateMap<Command, CommandReadDto>();
+
+            CreateMap<CommandCreateDto, Command>();
         }
     }
 }

@@ -8,6 +8,11 @@ namespace RestAPILearning.Data
 {
     public class CommanderRepository : ICommander
     {
+        public void CreateCommand(Command cmd)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Command> GetAllCommands()
         {
             var commands = new List<Command>
@@ -24,6 +29,11 @@ namespace RestAPILearning.Data
         public Command GetCommandbyID(int Id)
         {
         return new Command { Id = 0, HowTo = "how to boil", Line = "Boil water", Platform = "Pan" };
+        }
+
+        public bool SaveChanges()
+        {
+            throw new NotImplementedException();
         }
     }
 }

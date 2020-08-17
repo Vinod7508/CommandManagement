@@ -33,7 +33,7 @@ namespace RestAPILearning.Controllers
 
 
         //get api/commands/{id}
-        [HttpGet("{id}")]
+        [HttpGet("{id}",Name= "GetCommandbyId")]
         public ActionResult<CommandReadDto> GetCommandbyId(int id)
         {
 
@@ -47,5 +47,21 @@ namespace RestAPILearning.Controllers
         }
 
 
+
+        //post api/commands
+
+        [HttpPost]
+        public ActionResult<CommandReadDto> CreateCommand(CommandCreateDto commandCreateDto)
+        {
+            var commandmodel = _mapper.Map<Command>(commandCreateDto);
+            _repository.CreateCommand(commandmodel);
+            _repository.SaveChanges();
+
+            var commandReaddto = _mapper.Map<CommandReadDto>(commandmodel);
+
+            //return Ok(commandReaddto);
+
+            return CreatedAtRoute(nameof(GetCommandbyId), new { id = commandReaddto.Id },commandReaddto );
+        }
     }
 }

@@ -9,8 +9,15 @@ namespace RestAPILearning.Data
 {
    public interface ICommander
     {
-        IEnumerable<Command> GetAllCommands();
 
+        bool SaveChanges();
+
+        IEnumerable<Command> GetAllCommands();
         Command GetCommandbyID(int Id);
+        void CreateCommand(Command cmd);
+
+
+
+       
     }
 }
