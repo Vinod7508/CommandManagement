@@ -13,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using RestAPILearning.Data;
+using Newtonsoft.Json.Serialization;
 
 namespace RestAPILearning
 {
@@ -34,11 +35,18 @@ namespace RestAPILearning
             services.AddDbContext<CommanderDBContext>(options =>
                                     options.UseSqlServer(Configuration.GetConnectionString("CommanderConnection")));
 
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(
+                s =>
+                {
+                    s.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+                });
+
 
             //registering in service container
             services.AddScoped<ICommander, SqlCommanderRepository>();
             //services.AddScoped<ICommander, CommanderRepository>();
+
+
 
             //using automapper
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

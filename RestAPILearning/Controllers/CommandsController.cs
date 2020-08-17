@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using RestAPILearning.Data;
 using RestAPILearning.Dtos;
@@ -68,7 +69,7 @@ namespace RestAPILearning.Controllers
 
 
         //putaction api/commands/{id}
-        [HttpPut("{id}")]
+        [HttpPut("{Id}")]
         public IActionResult UpdateCommand(int Id,CommandUpdateDto commandUpdateDto)
         {
             var commandfromrepo = _repository.GetCommandbyID(Id);
@@ -82,12 +83,38 @@ namespace RestAPILearning.Controllers
             _repository.UpdateCommand(commandfromrepo);
             _repository.SaveChanges();
 
+            return NoContent();   
+        }
+
+
+        //patch  api/commnads/{id}
+        [HttpPatch("{Id}")]
+        public ActionResult PartialUpdate(int Id, JsonPatchDocument<CommandUpdateDto> patchDoc)
+        {
+            var commandfromrepo = _repository.GetCommandbyID(Id);
+
+            if (commandfromrepo == null)
+            {
+                return NotFound();
+            }
+
+            var CommandtoPatch = _mapper.Map<CommandUpdateDto>(commandfromrepo);
+            patchDoc.ApplyTo(CommandtoPatch, ModelState);
+
+            if (!TryValidateModel(CommandtoPatch))
+            {
+                return ValidationProblem(ModelState);
+            }
+
+            _mapper.Map(CommandtoPatch, commandfromrepo);
+
+            _repository.UpdateCommand(commandfromrepo);
+            _repository.SaveChanges();
+
             return NoContent();
 
 
-            
         }
-
 
     }
 }
